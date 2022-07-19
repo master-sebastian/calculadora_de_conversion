@@ -1,0 +1,38 @@
+[
+    {
+        "id": 1,
+        "tipo": "Modena chilena",
+        "nombre": {
+            "plural": "Los [cantidad] pesos chilenos",
+            "singular": "Un peso chileno"
+        },
+        "factor_de_conversion_dolar": 0.0010
+    },
+    {
+        "id": 2,
+        "tipo": "Modena colombiana",
+        "nombre": {
+            "plural": "Los [cantidad] pesos colombianos",
+            "singular": "Un peso colombiano"
+        },
+        "factor_de_conversion_dolar": 0.00022
+    },
+    {
+        "id": 3,
+        "tipo": "Modena argentina",
+        "nombre": {
+            "plural": "Los [cantidad] pesos argentinos",
+            "singular": "Un peso argentino"
+        },
+        "factor_de_conversion_dolar":  0.0078
+    },
+    {
+        "id": 4,
+        "tipo": "Modena mexicana",
+        "nombre": {
+            "plural": "Los [cantidad] pesos mexicanos",
+            "singular": "Un peso mexicano"
+        },
+        "factor_de_conversion_dolar": 0.049
+    }
+]
