@@ -1,0 +1,5 @@
+{
+    "api_users": "https://jsonplaceholder.typicode.com/users",
+    "min_money": 100,
+    "max_money": 1000000
+}
