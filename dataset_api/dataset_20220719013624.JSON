@@ -1,0 +1,112 @@
+[
+    {
+        "nombre": "Leanne Graham",
+        "id": 1,
+        "cantidad": 722300,
+        "tipo_moneda": 4,
+        "response": {
+            "mensaje": "Los 722300.0 pesos mexicanos equivale a 35392.7 dolares",
+            "cantidad": 722300.0,
+            "conversion": 35392.7
+        }
+    },
+    {
+        "nombre": "Ervin Howell",
+        "id": 2,
+        "cantidad": 472600,
+        "tipo_moneda": 4,
+        "response": {
+            "mensaje": "Los 472600.0 pesos mexicanos equivale a 23157.4 dolares",
+            "cantidad": 472600.0,
+            "conversion": 23157.4
+        }
+    },
+    {
+        "nombre": "Clementine Bauch",
+        "id": 3,
+        "cantidad": 133000,
+        "tipo_moneda": 3,
+        "response": {
+            "mensaje": "Los 133000.0 pesos argentinos equivale a 1037.39 dolares",
+            "cantidad": 133000.0,
+            "conversion": 1037.39
+        }
+    },
+    {
+        "nombre": "Patricia Lebsack",
+        "id": 4,
+        "cantidad": 120800,
+        "tipo_moneda": 3,
+        "response": {
+            "mensaje": "Los 120800.0 pesos argentinos equivale a 942.24 dolares",
+            "cantidad": 120800.0,
+            "conversion": 942.24
+        }
+    },
+    {
+        "nombre": "Chelsey Dietrich",
+        "id": 5,
+        "cantidad": 640200,
+        "tipo_moneda": 2,
+        "response": {
+            "mensaje": "Los 640200.0 pesos colombianos equivale a 140.84 dolares",
+            "cantidad": 640200.0,
+            "conversion": 140.84
+        }
+    },
+    {
+        "nombre": "Mrs. Dennis Schulist",
+        "id": 6,
+        "cantidad": 774900,
+        "tipo_moneda": 4,
+        "response": {
+            "mensaje": "Los 774900.0 pesos mexicanos equivale a 37970.1 dolares",
+            "cantidad": 774900.0,
+            "conversion": 37970.1
+        }
+    },
+    {
+        "nombre": "Kurtis Weissnat",
+        "id": 7,
+        "cantidad": 989300,
+        "tipo_moneda": 1,
+        "response": {
+            "mensaje": "Los 989300.0 pesos chilenos equivale a 989.3 dolares",
+            "cantidad": 989300.0,
+            "conversion": 989.3
+        }
+    },
+    {
+        "nombre": "Nicholas Runolfsdottir V",
+        "id": 8,
+        "cantidad": 699600,
+        "tipo_moneda": 3,
+        "response": {
+            "mensaje": "Los 699600.0 pesos argentinos equivale a 5456.88 dolares",
+            "cantidad": 699600.0,
+            "conversion": 5456.88
+        }
+    },
+    {
+        "nombre": "Glenna Reichert",
+        "id": 9,
+        "cantidad": 740000,
+        "tipo_moneda": 3,
+        "response": {
+            "mensaje": "Los 740000.0 pesos argentinos equivale a 5772.0 dolares",
+            "cantidad": 740000.0,
+            "conversion": 5772.0
+        }
+    },
+    {
+        "nombre": "Clementina DuBuque",
+        "id": 10,
+        "cantidad": 763600,
+        "tipo_moneda": 3,
+        "response": {
+            "mensaje": "Los 763600.0 pesos argentinos equivale a 5956.08 dolares",
+            "cantidad": 763600.0,
+            "conversion": 5956.08
+        }
+    }
+]

@@ -1,7 +1,7 @@
 import sys, json, random
 import os
 import csv
-
+from datetime import datetime
 base_path = os.path.dirname(os.path.abspath(__file__)).rsplit(os.sep, 1)
 
 sys.path.insert(0, os.path.join(base_path[0], "Librery", "Conversion"))
@@ -30,6 +30,8 @@ for cliente in clientes:
     if response != None and response["conversion"] != None:
         sumatoria += response["conversion"]
 
+lista_cliente_generados = []
+
 #Clientes en API
 for cliente in solcitudMetodoGetRespuestaJSON(config_json["api_users"]):    
     print("Nombre de cliente: ", cliente["name"])
@@ -41,9 +43,24 @@ for cliente in solcitudMetodoGetRespuestaJSON(config_json["api_users"]):
         print(response["mensaje"])
     if response != None and response["conversion"] != None:
         sumatoria += response["conversion"]
+    lista_cliente_generados.append({
+        "nombre": cliente["name"],
+        "id": cliente["id"],
+        "cantidad": cantidad,
+        "tipo_moneda":tipo_moneda,
+        "response":response
+    })
 
 sumatoria = int(sumatoria * 100)/100
 
 print()
 print()
 print("Dolares Recolectados: "+ str(sumatoria))
+
+dataset_folder = os.path.join(base_path[0], "dataset_api")
+if not os.path.exists(dataset_folder):
+    os.makedirs(dataset_folder)
+
+dataset_folder = os.path.join(dataset_folder, "dataset_"+datetime.now().strftime('%Y%m%d%H%M%S')+".JSON")
+with open(dataset_folder, 'w') as out:
+    out.write(json.dumps(lista_cliente_generados, indent=4))
