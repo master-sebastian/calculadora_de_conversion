@@ -1,4 +1,4 @@
-# calculadora_de_conversion
+# Calculadora de conversion
 
 Ejecutar el archivo Run\main.py
 
