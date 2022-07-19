@@ -14,4 +14,6 @@ with open(os.path.join(base_path[0], "db", "CSV", "Clientes.csv"), 'r') as f:
         clientes.append(cliente.replace('\n','').split(";"))
 
 for cliente in clientes:
+    print("Nombre de cliente: ", cliente[1])
+    print("Referencia: ", cliente[0])
     print(obtener_dato_por_consola(cliente[2], cliente[3]))
