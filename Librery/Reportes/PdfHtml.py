@@ -19,7 +19,7 @@ def obtenerPlantilla1(titulo=None, cuerpo=None, titulo_lista=None, lista=None, t
         html +="""<p>"""+str(cuerpo)+"""</p>"""
     
     if titulo_lista != None:
-        html += """"<h3>"""+str(titulo_lista)+"""</h3>"""
+        html += """<h3>"""+str(titulo_lista)+"""</h3>"""
 
     if lista != None:
         html += "<ul>"
@@ -28,7 +28,7 @@ def obtenerPlantilla1(titulo=None, cuerpo=None, titulo_lista=None, lista=None, t
         html += "</ul>"
     
     if titulo_tabla != None:
-        html += """"<h3>"""+str(titulo_tabla)+"""</h3>"""
+        html += """<h3>"""+str(titulo_tabla)+"""</h3>"""
 
     if tabla != None:
         if len(tabla) > 0:
