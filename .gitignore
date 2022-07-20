@@ -1,2 +1,4 @@
 dataset_api/*
-!dataset_20220719013624.JSON
+Reports/pdf/*
+!dataset_api/dataset_20220719013624.JSON
+!Reports/pdf/report_20220719210651.pdf

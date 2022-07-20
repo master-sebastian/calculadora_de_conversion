@@ -6,6 +6,7 @@ base_path = os.path.dirname(os.path.abspath(__file__)).rsplit(os.sep, 1)
 
 sys.path.insert(0, os.path.join(base_path[0], "Librery", "Conversion"))
 sys.path.insert(0, os.path.join(base_path[0], "Librery", "Http"))
+sys.path.insert(0, os.path.join(base_path[0], "Librery", "Reportes"))
 
 with open(os.path.join(base_path[0], "config.JSON")) as f:
    config_json = json.load(f)
@@ -53,9 +54,7 @@ for cliente in solcitudMetodoGetRespuestaJSON(config_json["api_users"]):
 
 sumatoria = int(sumatoria * 100)/100
 
-print()
-print()
-print("Dolares Recolectados: "+ str(sumatoria))
+print("\n\nDolares Recolectados: "+ str(sumatoria))
 
 dataset_folder = os.path.join(base_path[0], "dataset_api")
 if not os.path.exists(dataset_folder):
@@ -64,3 +63,20 @@ if not os.path.exists(dataset_folder):
 dataset_folder = os.path.join(dataset_folder, "dataset_"+datetime.now().strftime('%Y%m%d%H%M%S')+".JSON")
 with open(dataset_folder, 'w') as out:
     out.write(json.dumps(lista_cliente_generados, indent=4))
+
+
+from PdfHtml import crearPDFPorHTML, obtenerPlantilla1
+
+report_pdf_folder = os.path.join(base_path[0], "Reports", "pdf")
+
+crearPDFPorHTML(
+    html= obtenerPlantilla1(
+        titulo="Clientes consultados por el API REST",
+        cuerpo="Estamos bien ahora mismo",
+        titulo_lista="Lista de vendedores",
+        lista=["Sebastian", "Camilo"],
+        titulo_tabla="Lista de clientes",
+        tabla=[ ["Id del cliente", "Nombre del Cliente", "Cantidad", "Tipo" ,"conversión"] ] + [ [cliente["id"], cliente["nombre"], cliente["cantidad"], cliente["tipo_moneda"], "{:.2f}".format(cliente["response"]["conversion"])] for cliente in lista_cliente_generados]
+    ),
+    ruta_destino=os.path.join(report_pdf_folder, "report_"+datetime.now().strftime('%Y%m%d%H%M%S')+".pdf")
+)
